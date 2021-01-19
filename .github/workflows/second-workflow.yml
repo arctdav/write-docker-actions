@@ -17,6 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: meow
-        uses: ./.github/actions/cat-facts
-        id: cat
+      - name: one
+        uses: ./.github/actions/action-one
+        id: one
