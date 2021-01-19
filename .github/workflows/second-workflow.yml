@@ -1,0 +1,22 @@
+name: Second Docker Actions
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: meow
+        uses: ./.github/actions/cat-facts
+        id: cat
